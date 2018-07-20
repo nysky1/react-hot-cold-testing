@@ -44,6 +44,11 @@ describe('<Game />', () => {
     expect(wrapper.state('guesses')).toEqual([2]);
     expect(wrapper.state('feedback')).toEqual(`You\'re Cold...`);
 
+    //already guessed logic
+    instance.makeGuess(2);
+    expect(wrapper.state('guesses')).toEqual([2]);
+    expect(wrapper.state('feedback')).toEqual(`Already guessed.`);
+
     instance.makeGuess(30);
     expect(wrapper.state('guesses')).toEqual([2, 30]);
     expect(wrapper.state('feedback')).toEqual(`You\'re Warm.`);

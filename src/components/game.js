@@ -32,6 +32,11 @@ export default class Game extends React.Component {
       return;
     }
     
+    if (this.state.guesses.includes(guess)) {
+      this.setState({ feedback: 'Already guessed.' });
+      return;
+    }
+
     const difference = Math.abs(guess - this.state.correctAnswer);
 
     let feedback;
