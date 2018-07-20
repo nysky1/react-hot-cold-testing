@@ -31,7 +31,7 @@ export default class Game extends React.Component {
       this.setState({ feedback: 'Please enter a valid number' });
       return;
     }
-
+    
     const difference = Math.abs(guess - this.state.correctAnswer);
 
     let feedback;
