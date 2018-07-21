@@ -2,7 +2,9 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import Game from './game';
-
+import Header from './header';
+import StatusSection from './status-section';
+import InfoSection from './info-section';
 
 describe('<Game />', () => {
   // let seedGuesses = [];
@@ -65,25 +67,20 @@ describe('<Game />', () => {
   });
 });
 
-// describe('<Header />', () => {
-//   it('Renders without crashing', () => {
-//     shallow(<Header />);
-//   });
-// });
-// describe('<GuessSection />', () => {
-//   it('Renders without crashing', () => {
-//     shallow(<GuessSection />);
-//   });
+describe('<Header />', () => {
+  it('Renders without crashing', () => {
+    shallow(<Header />);
+  });
+});
 
-// });
-// describe('<InfoSection />', () => {
-//   it('Renders without crashing', () => {
-//     shallow(<InfoSection />);
-//   });
-// });
-// //Follow Up
-// describe('<StatusSection />', () => {
-//   it('Renders without crashing', () => {
-//     shallow(<StatusSection guesses={[]} auralStatus="" />);
-//   });
-// });
+describe('<InfoSection />', () => {
+  it('Renders without crashing', () => {
+    shallow(<InfoSection />);
+  });
+});
+
+describe('<StatusSection />', () => {
+  it('Renders without crashing', () => {
+    shallow(<StatusSection guesses={[]} auralStatus="" />);
+  });
+});
